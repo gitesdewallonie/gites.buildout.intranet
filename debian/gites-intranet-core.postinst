@@ -6,7 +6,6 @@ PACKAGE="gites-intranet"
 PACKAGE_HOME="/home/gdw/$PACKAGE"
 
 export CLIENT_HOME="$PACKAGE_HOME/var/instance01"
-$PACKAGE_HOME/bin/gdw_db_migration upgrade head
 
 case "$1" in
     configure)
