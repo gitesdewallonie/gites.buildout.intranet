@@ -1,10 +1,4 @@
-gites-intranet (1.0-2) stable; urgency=low
-
-  * Fix bootstrap
-
- -- Jean-François Roche <jfroche@affinitic.be>  Thu, 10 Jan 2013 17:00:00 +0100
-
-gites-intranet (1.0-1) stable; urgency=low
+gites-intranet (0.0-1) stable; urgency=low
 
   * Update package to use new egg names schema
 
