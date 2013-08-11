@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e
+set -x
+
+PACKAGE="gites-intranet-core"
+
+
+case "$1" in
+    remove|deconfigure)
+	find /home/gdw/gites-intranet/eggs /home/gdw/gites-intranet/devel -name "*.pyc" -delete;
+	find /home/gdw/gites-intranet/eggs /home/gdw/gites-intranet/devel -name "*.pyo" -delete;
+	find /home/gdw/gites-intranet/eggs /home/gdw/gites-intranet/devel -name "*.bin" -delete;
+    ;;
+
+    upgrade|failed-upgrade)
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 0
+    ;;
+esac
+
+exit 0
