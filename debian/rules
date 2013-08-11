@@ -7,7 +7,7 @@
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
-INSTANCECOUNT := 4
+INSTANCECOUNT := 2
 PACKAGE	  := gites-intranet
 CURDIR    := $(shell pwd)
 BUILDDIR  := $(CURDIR)/tmp/$(PACKAGE)
@@ -63,7 +63,6 @@ install-core:
 	cp -ap $(BUILDDIR)/devel $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/eggs $(DEBIANCORE)/${INSTALLDIR}
 	cp -ap $(BUILDDIR)/parts/omelette $(DEBIANCORE)/${INSTALLDIR}/parts
-	cp -ap $(BUILDDIR)/parts/zpsycopg $(DEBIANCORE)/${INSTALLDIR}/parts
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeo
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/zeopack
 	rm -r $(DEBIANCORE)/${INSTALLDIR}/bin/repozo
